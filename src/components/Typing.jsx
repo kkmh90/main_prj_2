@@ -23,7 +23,10 @@ const TypingText = ({ text, speed, fontSize, color, className }) => {
     return () => clearInterval(interval);
   });
   return (
-    <p className="text" style={{ fontSize: `${fontSize}`, color: `${color}` }}>
+    <p
+      className="cursor"
+      style={{ fontSize: `${fontSize}`, color: `${color}` }}
+    >
       {Text}
     </p>
   );

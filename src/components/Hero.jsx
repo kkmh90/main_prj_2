@@ -2,12 +2,12 @@ import video from "../video/sample.mp4";
 import React from "react";
 import TypingText from "../components/Typing.jsx";
 import colors, { white } from "tailwindcss/colors";
-import "./test.css";
+import "./Cursor.css";
 
 export default function Hero() {
   return (
     <section>
-      <div className="relative flex items-center justify-center w-screen h-screen overflow-hidden">
+      <div className="relative flex items-center justify-center w-screen h-screen overflow-hidden brightness-60">
         <video muted autoPlay loop playsInline>
           <source src={video}></source>
         </video>
@@ -24,6 +24,7 @@ export default function Hero() {
             fontSize="4rem"
             color={white}
           />
+          <p className="cursor"></p>
         </div>
       </div>
     </section>
