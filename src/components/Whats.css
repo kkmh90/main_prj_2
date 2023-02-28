@@ -1,0 +1,3 @@
+#omo-card > * {
+  pointer-events: none;
+}

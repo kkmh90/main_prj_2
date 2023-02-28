@@ -1,7 +1,7 @@
-import video from "../video/sample.mp4";
+import video from "./video/sample.mp4";
 import React from "react";
-import TypingText from "../components/Typing.jsx";
-import colors, { white } from "tailwindcss/colors";
+//import TypingText from "../components/Typing.jsx";
+//import colors, { white } from "tailwindcss/colors";
 import "./Cursor.css";
 
 export default function Hero() {
@@ -17,14 +17,15 @@ export default function Hero() {
             position: "absolute",
           }}
         >
-          <TypingText
+          {/* <TypingText
             className="text"
             text="오모로봇입니다."
             speed={140}
             fontSize="4rem"
             color={white}
           />
-          <p className="cursor"></p>
+          <p className="cursor"></p>  */}
+          <h1 className="fadein">OMOROBOT</h1>
         </div>
       </div>
     </section>
