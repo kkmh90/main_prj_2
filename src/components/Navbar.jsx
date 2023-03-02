@@ -7,13 +7,7 @@ import { Link } from "react-router-dom";
 
 function BasicExample() {
   return (
-    <Navbar
-      class="nav"
-      bg="#00ff0000"
-      expand="lg"
-      className="fixed z-50 w-screen"
-    >
-      <a></a>
+    <Navbar id="nav" expand="lg" className="fixed z-50 w-screen">
       <Container>
         <Navbar.Brand className="text-white" href="#home">
           OMOROBOT
@@ -48,4 +42,14 @@ function BasicExample() {
     </Navbar>
   );
 }
+
+window.addEventListener("scroll", () => {
+  const test = document.querySelector("nav");
+  if (window.scrollY > 100) {
+    test.style.backgroundColor = "black";
+    test.style.transitionDuration = "2s";
+  } else {
+    test.style.backgroundColor = "#00ff0000";
+  }
+});
 export default BasicExample;
