@@ -7,31 +7,53 @@ import { Link } from "react-router-dom";
 
 function BasicExample() {
   return (
-    <Navbar id="nav" expand="lg" className="fixed z-50 w-screen">
+    <Navbar bg="light" expand="lg" className="fixed z-50 w-screen">
       <Container>
-        <Navbar.Brand className="text-white" href="#home">
-          OMOROBOT
-        </Navbar.Brand>
+        <Navbar.Brand href="#home">OMOROBOT</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className="text-white" href="/">
+            <Nav.Link
+              href="#hero"
+              className="border-indigo-500 hover:border-b-4 active:border-b-4 "
+            >
               Home
             </Nav.Link>
-            <Nav.Link className="text-white" href="#home">
+            <Nav.Link
+              href="#robot"
+              className="border-indigo-500 hover:border-b-4"
+            >
               Robot
             </Nav.Link>
-            <Nav.Link className="text-white" href="#home">
+            <Nav.Link
+              href="#about"
+              className="border-indigo-500 hover:border-b-4"
+            >
               About
             </Nav.Link>
-            <Nav.Link className="text-white" href="#home">
+            <Nav.Link
+              href="#gallery"
+              className="border-indigo-500 hover:border-b-4"
+            >
+              Gallery
+            </Nav.Link>
+            <Nav.Link
+              href="#contact"
+              className="border-indigo-500 hover:border-b-4"
+            >
+              Contact Us
+            </Nav.Link>
+            <Nav.Link
+              href="#home"
+              className="border-indigo-500 hover:border-b-4"
+            >
               Team
             </Nav.Link>
-            <Nav.Link className="text-white" href="#home">
+            <Nav.Link
+              href="#home"
+              className="border-indigo-500 hover:border-b-4"
+            >
               Board
-            </Nav.Link>
-            <Nav.Link className="text-white" href="#link">
-              Link
             </Nav.Link>
           </Nav>
           <button className="w-16 h-8 text-white bg-blue-600 border-none rounded-md hover:bg-blue-800">
@@ -43,13 +65,4 @@ function BasicExample() {
   );
 }
 
-window.addEventListener("scroll", () => {
-  const test = document.querySelector("nav");
-  if (window.scrollY > 100) {
-    test.style.backgroundColor = "black";
-    test.style.transitionDuration = "2s";
-  } else {
-    test.style.backgroundColor = "#00ff0000";
-  }
-});
 export default BasicExample;

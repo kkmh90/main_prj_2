@@ -7,18 +7,19 @@ import RoutesSetup from "./routes/RoutesSetup";
 import Index from "./pages/Index";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignUpPage";
+import NewNav from "./components/NewNav";
 
 export default function App() {
   return (
     <main>
       <BrowserRouter>
-        <Navbar />
+        {/* <NewNav /> */}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </main>
   );
