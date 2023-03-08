@@ -5,6 +5,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
 import { useState } from "react";
 import Fade from "react-reveal/Fade";
+import Modal from "react-modal";
+import Email from "./Email";
 
 export default function KakaoMap() {
   useEffect(() => {
@@ -38,6 +40,27 @@ export default function KakaoMap() {
     // 마커를 지도 위에 표시
     marker.setMap(map);
   };
+
+  // 모달관련
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const customStyles = {
+    content: {
+      width: "40%",
+      height: "400px",
+      margin: "auto",
+    },
+  };
+
+  Modal.setAppElement("#root");
 
   return (
     <div
@@ -107,8 +130,10 @@ export default function KakaoMap() {
               </p>
             </div>
           </div>
+
           <div
             id="map-card"
+            onClick={openModal}
             className={
               mouseOverTwo
                 ? "grid items-center h-48 mb-4 bg-blue-500 rounded-lg shadow-lg duration-300"
@@ -152,6 +177,15 @@ export default function KakaoMap() {
               </p>
             </div>
           </div>
+          {/* 메일보내기 모달창 */}
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            style={customStyles}
+          >
+            {/* Email.jsx */}
+            <Email closeModal={closeModal} />
+          </Modal>
           <div
             id="map-card"
             className={

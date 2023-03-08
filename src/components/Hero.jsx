@@ -1,4 +1,3 @@
-import heroImg from "../img/IMG_8197.jpg";
 import Fade from "react-reveal/Fade";
 import video from "../video/sample.mp4";
 
