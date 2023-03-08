@@ -41,11 +41,11 @@ const Form = styled.form`
     outline: none;
     cursor: pointer;
     color: white;
-    background-color: #1d4ed8;
+    background-color: #22c55e;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.375rem;
     :hover {
-      background-color: #22c55e;
+      background-color: #1d4ed8;
     }
   }
 `;

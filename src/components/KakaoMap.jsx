@@ -54,7 +54,7 @@ export default function KakaoMap() {
 
   const customStyles = {
     content: {
-      width: "40%",
+      width: "490px",
       height: "400px",
       margin: "auto",
     },
