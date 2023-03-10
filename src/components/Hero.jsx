@@ -13,7 +13,7 @@ export default function Hero() {
         </video>
         {/* <img src={heroImg} alt="" /> */}
       </div>
-      <Fade>
+      {/* <Fade>
         <div className="absolute top-60 left-16">
           <p className="fixed text-6xl text-white">OMOROBOT</p>
         </div>
@@ -33,8 +33,8 @@ export default function Hero() {
             look not at what he has already achieved, but at what he aspires to
             do.
           </p>
-        </Fade>
-      </div>
+        </Fade> */}
+      {/* </div> */}
     </div>
   );
 }

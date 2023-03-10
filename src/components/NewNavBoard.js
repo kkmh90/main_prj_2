@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as LinkScroll } from "react-scroll";
 import { Link } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
 
 import "./Navbar.css";
 
@@ -12,7 +13,7 @@ const Navbar = () => {
   const closeMenu = () => setClick(false);
 
   return (
-    <div className="bg-black header">
+    <div className="overflow-visible bg-black header">
       <nav className="navbar">
         <div className="hamburger" onClick={handleClick}>
           {click ? (
@@ -83,9 +84,9 @@ const Navbar = () => {
             </LinkScroll>
           </li>
           <li className="nav-item">
-            <a href="http://localhost:3000/#gallery" onClick={closeMenu}>
+            <Link to="/" onClick={closeMenu}>
               Team
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a href="/board" onClick={closeMenu}>
@@ -99,6 +100,32 @@ const Navbar = () => {
               <p className="font-semibold ">Login </p>
             </Link>
           </button>
+          <div className="w-5"></div>
+          <Dropdown>
+            <Dropdown.Toggle
+              variant="success"
+              id="dropdown-basic"
+              style={{ height: "2rem", minHeight: "1rem" }}
+              className="font-bold text-white bg-green-600 border-0 shadow-md hover:bg-green-800"
+            >
+              이수근
+            </Dropdown.Toggle>
+            <Dropdown.Menu className="border-0 shadow-sm">
+              <Link to="/board/my">
+                <Dropdown.Item href="#/action-1" className="text-sm">
+                  내가 쓴 글
+                </Dropdown.Item>
+              </Link>
+              <Link to="/ChangeInfo">
+                <Dropdown.Item href="#/action-2" className="text-sm">
+                  정보 변경
+                </Dropdown.Item>
+              </Link>
+              <Dropdown.Item href="#/action-3" className="text-sm">
+                로그아웃
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </ul>
       </nav>
     </div>
