@@ -88,13 +88,13 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#demo" onClick={closeMenu}>
+            <a href="/board" onClick={closeMenu}>
               Board
             </a>
           </li>
         </ul>
         <ul>
-          <button className="flex items-center justify-center w-16 h-8 text-white bg-green-500 border-none rounded-md shadow-md hover:bg-blue-800">
+          <button className="flex items-center justify-center w-16 h-8 text-white bg-green-500 border-none rounded-md shadow-md hover:bg-green-600">
             <Link to="/login">
               <p className="font-semibold ">Login </p>
             </Link>
@@ -108,7 +108,7 @@ const Navbar = () => {
 window.addEventListener("scroll", () => {
   const test = document.querySelector(".header");
   if (window.scrollY > 100) {
-    test.style.backgroundColor = "black";
+    test.style.backgroundColor = "rgba(0, 0, 0, .8)";
   } else {
     test.style.backgroundColor = "#00ff0000";
   }

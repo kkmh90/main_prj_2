@@ -5,8 +5,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
 import { useState } from "react";
 import Fade from "react-reveal/Fade";
-import Modal from "react-modal";
-import Email from "./Email";
+import ContactUs from "./Email";
 
 export default function KakaoMap() {
   useEffect(() => {
@@ -41,35 +40,14 @@ export default function KakaoMap() {
     marker.setMap(map);
   };
 
-  // 모달관련
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
-
-  const customStyles = {
-    content: {
-      width: "490px",
-      height: "400px",
-      margin: "auto",
-    },
-  };
-
-  Modal.setAppElement("#root");
-
   return (
     <div
-      style={{ margin: "auto", width: "90%" }}
+      style={{ margin: "auto", width: "60%" }}
       id="contact"
       className="pt-20"
     >
       <Fade bottom>
-        <p className="text-3xl font-bold">Contact Us</p>
+        <p className="text-2xl font-bold">Contact Us</p>
       </Fade>
       <Fade bottom>
         <div
@@ -83,7 +61,57 @@ export default function KakaoMap() {
           ></div>
         </div>
       </Fade>
-      <Fade bottom>
+      <div className="flex mt-16 mb-16">
+        <div>
+          <div className="flex">
+            <div className="flex items-center justify-center w-12 h-12 bg-blue-500 rounded-full">
+              <TbMap2 className="text-3xl text-white" />
+            </div>
+            <div className="grid ml-3">
+              <div>
+                <p className="text-sm font-bold">주소</p>
+              </div>
+              <div>
+                <p className="text-sm">
+                  대전 서구 계룡로491번길 86 미래융합교육원
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex mt-5">
+            <div className="flex items-center justify-center w-12 h-12 bg-blue-500 rounded-full">
+              <AiOutlineMail className="text-3xl text-white" />
+            </div>
+            <div className="grid ml-3">
+              <div>
+                <p className="text-sm font-bold">메일</p>
+              </div>
+              <div>
+                <p className="text-sm">omorobot123@sample.com</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex mt-5">
+            <div className="flex items-center justify-center w-12 h-12 bg-blue-500 rounded-full">
+              <AiOutlinePhone className="text-3xl text-white" />
+            </div>
+            <div className="grid ml-3">
+              <div>
+                <p className="text-sm font-bold">연락처</p>
+              </div>
+              <div>
+                <p className="text-sm">042-333-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ flexGrow: 2 }} className="ml-32 bg-white ">
+          <ContactUs />
+        </div>
+      </div>
+
+      {/* <Fade bottom>
         <div className="flex justify-between">
           <div
             id="map-card"
@@ -98,7 +126,7 @@ export default function KakaoMap() {
             onMouseLeave={() => {
               setMouseOver((mouseOver) => !mouseOver);
             }}
-            style={{ width: "420px" }}
+            style={{ width: "360px" }}
           >
             <div className="grid items-center justify-center lign-middle">
               <div className="flex justify-center mb-2">
@@ -130,10 +158,8 @@ export default function KakaoMap() {
               </p>
             </div>
           </div>
-
           <div
             id="map-card"
-            onClick={openModal}
             className={
               mouseOverTwo
                 ? "grid items-center h-48 mb-4 bg-blue-500 rounded-lg shadow-lg duration-300"
@@ -145,7 +171,7 @@ export default function KakaoMap() {
             onMouseLeave={() => {
               setMouseOverTwo((mouseOverTwo) => !mouseOverTwo);
             }}
-            style={{ width: "420px" }}
+            style={{ width: "360px" }}
           >
             <div className="grid items-center justify-center lign-middle">
               <div className="flex justify-center mb-2">
@@ -177,15 +203,6 @@ export default function KakaoMap() {
               </p>
             </div>
           </div>
-          {/* 메일보내기 모달창 */}
-          <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            style={customStyles}
-          >
-            {/* Email.jsx */}
-            <Email closeModal={closeModal} />
-          </Modal>
           <div
             id="map-card"
             className={
@@ -199,7 +216,7 @@ export default function KakaoMap() {
             onMouseLeave={() => {
               setMouseOverThree((mouseOverThree) => !mouseOverThree);
             }}
-            style={{ width: "420px" }}
+            style={{ width: "360px" }}
           >
             <div className="grid items-center justify-center lign-middle">
               <div className="flex justify-center mb-2">
@@ -232,7 +249,7 @@ export default function KakaoMap() {
             </div>
           </div>
         </div>
-      </Fade>
+      </Fade> */}
     </div>
   );
 }

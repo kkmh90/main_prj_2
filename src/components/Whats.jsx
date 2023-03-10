@@ -13,9 +13,9 @@ export default function Whats() {
 
   return (
     <div id="about" className="pt-20">
-      <div style={{ margin: "auto", width: "90%" }}>
+      <div style={{ margin: "auto", width: "60%" }}>
         <Fade bottom>
-          <p className="text-3xl font-bold ">(로봇이름)은?</p>
+          <p className="text-2xl font-bold ">(로봇이름)은?</p>
         </Fade>
         <Fade bottom>
           <div className="flex justify-between mt-4 mb-5">
@@ -23,8 +23,8 @@ export default function Whats() {
               id="omo-card"
               className={
                 mouseOver
-                  ? "text-center rounded-lg shadow-lg bg-red-500 w-72 h-72 duration-300"
-                  : "text-center rounded-lg shadow-lg w-72 h-72 duration-300"
+                  ? "text-center rounded-lg shadow-lg bg-red-500 w-52 h-60 duration-300"
+                  : "text-center rounded-lg shadow-lg w-52 h-60 duration-300"
               }
               onMouseOver={() => {
                 setMouseOver((mouseOver) => !mouseOver);
@@ -37,16 +37,16 @@ export default function Whats() {
                 <AiFillCar
                   className={
                     mouseOver
-                      ? "mt-16 text-5xl text-white duration-300"
-                      : "mt-16 text-5xl text-red-500 duration-300"
+                      ? "mt-8 text-5xl text-white duration-300"
+                      : "mt-8 text-5xl text-red-500 duration-300"
                   }
                 />
               </div>
               <p
                 className={
                   mouseOver
-                    ? "mb-3 text-lg font-semibold text-white duration-300"
-                    : "mb-3 text-lg font-semibold duration-300"
+                    ? "mb-3 text-md font-semibold text-white duration-300"
+                    : "mb-3 text-md font-semibold duration-300"
                 }
               >
                 완벽한 자율주행
@@ -54,8 +54,8 @@ export default function Whats() {
               <p
                 className={
                   mouseOver
-                    ? "ml-4 mr-4 text-white duration-300"
-                    : "ml-4 mr-4 duration-300"
+                    ? "ml-4 mr-4 text-white duration-300 text-sm"
+                    : "ml-4 mr-4 duration-300 text-sm"
                 }
               >
                 아무런 조작 없이 장애물을 피해서 정해진 경로로 반복 이동할 수
@@ -67,8 +67,8 @@ export default function Whats() {
               id="omo-card"
               className={
                 mouseOverTwo
-                  ? "text-center rounded-lg shadow-lg bg-red-500 w-72 h-72 duration-300"
-                  : "text-center rounded-lg shadow-lg w-72 h-72 duration-300"
+                  ? "text-center rounded-lg shadow-lg bg-red-500 w-52 h-60 duration-300"
+                  : "text-center rounded-lg shadow-lg w-52 h-60 duration-300"
               }
               onMouseOver={() => {
                 setMouseOverTwo((mouseOverTwo) => !mouseOverTwo);
@@ -81,16 +81,16 @@ export default function Whats() {
                 <GiWeightScale
                   className={
                     mouseOverTwo
-                      ? "mt-16 text-5xl text-white duration-300"
-                      : "mt-16 text-5xl text-red-500 duration-300"
+                      ? "mt-8 text-5xl text-white duration-300"
+                      : "mt-8 text-5xl text-red-500 duration-300"
                   }
                 />
               </div>
               <p
                 className={
                   mouseOverTwo
-                    ? "mb-3 text-lg font-semibold text-white duration-300"
-                    : "mb-3 text-lg font-semibold duration-300"
+                    ? "mb-3 text-md font-semibold text-white duration-300"
+                    : "mb-3 text-md font-semibold duration-300"
                 }
               >
                 넉넉한 적재 중량
@@ -98,8 +98,8 @@ export default function Whats() {
               <p
                 className={
                   mouseOverTwo
-                    ? "ml-4 mr-4 text-white duration-300"
-                    : "ml-4 mr-4 duration-300"
+                    ? "ml-4 mr-4 text-white duration-300 text-sm"
+                    : "ml-4 mr-4 duration-300 text-sm"
                 }
               >
                 최대 00kg까지 적재가 가능합니다.
@@ -109,8 +109,8 @@ export default function Whats() {
               id="omo-card"
               className={
                 mouseOverThree
-                  ? "text-center rounded-lg shadow-lg bg-red-500 w-72 h-72 duration-300"
-                  : "text-center rounded-lg shadow-lg w-72 h-72 duration-300"
+                  ? "text-center rounded-lg shadow-lg bg-red-500 w-52 h-60 duration-300"
+                  : "text-center rounded-lg shadow-lg w-52 h-60 duration-300"
               }
               onMouseOver={() => {
                 setMouseOverThree((mouseOverThree) => !mouseOverThree);
@@ -123,16 +123,16 @@ export default function Whats() {
                 <GiConsoleController
                   className={
                     mouseOverThree
-                      ? "mt-16 text-5xl text-white duration-300"
-                      : "mt-16 text-5xl text-red-500 duration-300"
+                      ? "mt-8 text-5xl text-white duration-300"
+                      : "mt-8 text-5xl text-red-500 duration-300"
                   }
                 />
               </div>
               <p
                 className={
                   mouseOverThree
-                    ? "mb-3 text-lg font-semibold text-white duration-300"
-                    : "mb-3 text-lg font-semibold duration-300"
+                    ? "mb-3 text-md font-semibold text-white duration-300"
+                    : "mb-3 text-md font-semibold duration-300"
                 }
               >
                 수동 조작 기능
@@ -140,8 +140,8 @@ export default function Whats() {
               <p
                 className={
                   mouseOverThree
-                    ? "ml-4 mr-4 text-white duration-300"
-                    : "ml-4 mr-4 duration-300"
+                    ? "ml-4 mr-4 text-white duration-300 text-sm"
+                    : "ml-4 mr-4 duration-300 text-sm"
                 }
               >
                 수동 조작을 통하여 원하는 곳으로 물건을 운반할 수 있습니다.
@@ -151,8 +151,8 @@ export default function Whats() {
               id="omo-card"
               className={
                 mouseOverFour
-                  ? "text-center rounded-lg shadow-lg bg-red-500 w-72 h-72 duration-300"
-                  : "text-center rounded-lg shadow-lg w-72 h-72 duration-300"
+                  ? "text-center rounded-lg shadow-lg bg-red-500 w-52 h-60 duration-300"
+                  : "text-center rounded-lg shadow-lg w-52 h-60 duration-300"
               }
               onMouseOver={() => {
                 setMouseOverFour((mouseOverFour) => !mouseOverFour);
@@ -165,16 +165,16 @@ export default function Whats() {
                 <RiBattery2ChargeLine
                   className={
                     mouseOverFour
-                      ? "mt-16 text-5xl text-white duration-300"
-                      : "mt-16 text-5xl text-red-500 duration-300"
+                      ? "mt-8 text-5xl text-white duration-300"
+                      : "mt-8 text-5xl text-red-500 duration-300"
                   }
                 />
               </div>
               <p
                 className={
                   mouseOverFour
-                    ? "mb-3 text-lg font-semibold text-white duration-300"
-                    : "mb-3 text-lg font-semibold duration-300"
+                    ? "mb-3 text-md font-semibold text-white duration-300 "
+                    : "mb-3 text-md font-semibold duration-300"
                 }
               >
                 자동 충전
@@ -182,8 +182,8 @@ export default function Whats() {
               <p
                 className={
                   mouseOverFour
-                    ? "ml-4 mr-4 text-white duration-300"
-                    : "ml-4 mr-4 duration-300"
+                    ? "ml-4 mr-4 text-white duration-300 text-sm"
+                    : "ml-4 mr-4 duration-300 text-sm"
                 }
               >
                 배터리가 없으면 스스로 충전 구역으로 이동하여 충전합니다.
